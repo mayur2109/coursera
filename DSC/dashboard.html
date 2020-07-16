@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+	
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--Fontawesome-->
+    <script src="https://kit.fontawesome.com/c490523a50.js" crossorigin="anonymous"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+	<title>Dashboard</title>
+</head>
+<body>
+	<!--Navbar start-->
+	<nav class="navbar navbar-expand-lg bg-custom fixed-top" id="mainNavbar">
+         <a class="navbar-brand" href="#"><span class="text-primary">DSC</span></a>
+
+         <form class="row form-inline my-2 my-lg-0" id="searchBar" align="center">
+              <input class="col-8 form-control mr-sm-2 d-inline" type="search" placeholder="Search" aria-label="Search">
+              <button class="col-2 btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebar-toggle" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+           </button>
+  <!--Left side of navbar-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Dashboard</a>
+            </li>
+          </ul>
+    
+  <!--Right side of navbar--> 
+          
+          <ul class="navbar-nav ml-auto ">
+    	    <form class="form-inline my-2 my-lg-0 mr-2">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <li class="nav-item dropdown">
+             <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        	 <i class="fas fa-envelope"></i>
+             </a>
+           <div class="dropdown-menu bg-component" aria-labelledby="navbarDropdown">
+        	
+            <a class="dropdown-item" href="#">
+            	<div class="row justify-content-around">
+            	    <div class="col-3 d-flex flex-column align-items-center">
+          		        <i class="fas fa-user-circle"></i>Username
+          	        </div>
+          	        <div class="col-7">
+          		        Message
+          	        </div>
+          	        <div class="col-2">
+          		        22m
+          	        </div>
+          	    </div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+            	<div class="d-flex justify-content-around">
+            	    <div class="col-3 d-flex flex-column align-items-center">
+          		        <i class="fas fa-user-circle"></i>Username
+          	        </div>
+          	        <div class="col-7">
+          		        Message
+          	        </div>
+          	        <div class="col-2">
+          		        22m
+          	        </div>
+          	    </div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+            	<div class="d-flex justify-content-around">
+            	    <div class="col-3 d-flex flex-column align-items-center">
+          		        <i class="fas fa-user-circle"></i>Username
+          	        </div>
+          	        <div class="col-7">
+          		        Message
+          	        </div>
+          	        <div class="col-2">
+          		        22m
+          	        </div>
+          	    </div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+            	<div class="row d-flex justify-content-around">
+            	    <div class="col-3 d-flex flex-column align-items-center">
+          		        <i class="fas fa-user-circle"></i>Username
+          	        </div>
+          	        <div class="col-7">
+          		        Message
+          	        </div>
+          	        <div class="col-2">
+          		        22m
+          	        </div>
+          	    </div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+            	<div class="d-flex justify-content-around">
+            	    <div class="col-3 d-flex flex-column align-items-center">
+          		        <i class="fas fa-user-circle"></i>Username
+          	        </div>
+          	        <div class="col-7">
+          		        Message
+          	        </div>
+          	        <div class="col-2">
+          		        22m
+          	        </div>
+          	    </div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+            	<div class="d-flex justify-content-around">
+            	    <div class="col-3 d-flex flex-column align-items-center">
+          		        <i class="fas fa-user-circle"></i>Username
+          	        </div>
+          	        <div class="col-7">
+          		        Message
+          	        </div>
+          	        <div class="col-2">
+          		        22m
+          	        </div>
+          	    </div>
+            </a>
+            </div>
+            </li>
+
+            <li class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        	 <i class="fas fa-user-circle"></i> Username
+             </a>
+            <div class="dropdown-menu user-dropdown bg-component" aria-labelledby="navbarDropdown">
+        	
+            <a class="dropdown-item" href="#" >
+          	<div class="container" align="center">
+          		<i class="fas fa-user-circle userImg"></i>
+          		<div class="my-2">Username</div>
+          	</div>
+            </a>
+            <div class="dropdown-divider"></div>
+             <a class="dropdown-item" href="#"><i class="fas fa-key"></i> Change Password</a>
+             <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+            </div>
+            </li>
+          </ul>
+         </div>
+     </div>
+    </nav>
+    <!--navbar End-->
+
+    <!-- Footer for smaller screens-->
+    <footer class="footer mt-auto py-3 fixed-bottom d-lg-none">
+    
+      <div class="d-flex justify-content-around align-items-center">
+
+      	<a href="#"><i class="fas fa-user-circle"></i></a>
+      	<a href="#" id="message-toggle"><i class="fas fa-envelope"></i></a>
+      	<a href="#" id="search-toggle"><i class="fas fa-search" ></i></a>
+      	<a href="#"><i class="fas fa-sign-out-alt"></i></a>
+      </div>
+   
+    </footer>
+   
+   	
+   	<div class="row">
+    <div class="col-1">
+   	<div class="fixed mt-5 d-none d-lg-block">
+    
+   <input type="checkbox" id="check">
+	<!--sidebar-start-->
+    <div class="sidebar d-flex flex-column justify-content-around align-items-start" >
+    	
+        <a href="#"><i class="fas fa-desktop" align="center"></i><span><!--&nbsp;-->Dashboard</span></a>
+        <a href="#"><i class="fas fa-chart-line"></i><span>Analytics</span></a>
+        <a href="#"><i class="far fa-calendar-check"></i><span>Events</span></a>
+        <a href="#"><i class="fas fa-comment-dollar"></i><span>Marketing</span></a>
+        <a href="#"><i class="fas fa-blog"></i><span>Blogs</span></a>
+        <a href="#"><i class="fas fa-photo-video"></i><span>Media</span></a>
+        <a href="#"><i class="fas fa-users"></i><span>Teams</span></a>
+        <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+        
+        <label for="check">
+           <i class="fas fa-angle-right" id="sidebar_btn"></i>
+        </label>
+    
+    </div>
+    <!--sdiebar-end-->
+    </div>
+    </div>
+   
+   <!-- Sidebar Toggle-->
+   <div class="collapse navbar-collapse d-lg-none fixed-top" id="sidebar-toggle">
+   	<ul class="navbar-nav mr-auto">
+        <li class="nav-item mt-2">
+        <a href="#"><i class="fas fa-desktop" align="center"></i><span><!--&nbsp;-->Dashboard</span></a>
+        </li>
+        <li class="nav-item">
+        <a href="#"><i class="fas fa-chart-line"></i><span>Analytics</span></a>
+        </li>
+        <li class="nav-item">
+        <a href="#"><i class="far fa-calendar-check" align="center"></i><span>Events</span></a>
+        </li>
+        <li class="nav-item">
+        <a href="#"><i class="fas fa-comment-dollar"></i><span>Marketing</span></a>
+        </li>
+        <li class="nav-item">
+        <a href="#"><i class="fas fa-blog"></i><span>Blogs</span></a>
+        </li>
+        <li class="nav-item">
+        <a href="#"><i class="fas fa-photo-video"></i><span>Media</span></a>
+        </li>
+        <li class="nav-item">
+        <a href="#"><i class="fas fa-users"></i><span>Teams</span></a>
+        </li>
+        <li class="nav-item mb-2">
+        <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+        </li>
+    </ul>
+   </div>
+
+    <!-- Main Content-->
+    <div class="col-lg-11">
+
+    	<div class="container">
+    		
+    		<div class="move-back">
+    
+    <!-- Messages view for smaller screens-->
+    <div id="Messages">
+
+    	<div class="d-flex flex-column justify-content-around align-items-center d-lg-none">
+    		<span class="message-time">Today</span>
+    		<div class="d-flex justify-content-around message-content">
+            	    <div class="col-3 d-flex flex-column align-items-center">
+          		        <i class="fas fa-user-circle"></i>Username
+          	        </div>
+          	        <div class="col-7">
+          		        Message
+          	        </div>
+          	        <div class="col-2">
+          		        22m
+          	        </div>
+          	    </div>
+
+          	    <div class="d-flex justify-content-around message-content">
+            	    <div class="col-3 d-flex flex-column align-items-center">
+          		        <i class="fas fa-user-circle"></i>Username
+          	        </div>
+          	        <div class="col-7">
+          		        Message
+          	        </div>
+          	        <div class="col-2">
+          		        22m
+          	        </div>
+          	    </div>
+
+          	    <div class="d-flex justify-content-around message-content">
+            	    <div class="col-3 d-flex flex-column align-items-center">
+          		        <i class="fas fa-user-circle"></i>Username
+          	        </div>
+          	        <div class="col-7">
+          		        Message
+          	        </div>
+          	        <div class="col-2">
+          		        22m
+          	        </div>
+          	    </div>
+
+          	    <span class="message-time">This Week</span>
+    		<div class="d-flex justify-content-around message-content">
+            	    <div class="col-3 d-flex flex-column align-items-center">
+          		        <i class="fas fa-user-circle"></i>Username
+          	        </div>
+          	        <div class="col-7">
+          		        Message
+          	        </div>
+          	        <div class="col-2">
+          		        22m
+          	        </div>
+          	    </div>
+
+          	    <div class="d-flex justify-content-around message-content">
+            	    <div class="col-3 d-flex flex-column align-items-center">
+          		        <i class="fas fa-user-circle"></i>Username
+          	        </div>
+          	        <div class="col-7">
+          		        Message
+          	        </div>
+          	        <div class="col-2">
+          		        22m
+          	        </div>
+          	    </div>
+
+          	    <div class="d-flex justify-content-around message-content">
+            	    <div class="col-3 d-flex flex-column align-items-center">
+          		        <i class="fas fa-user-circle"></i>Username
+          	        </div>
+          	        <div class="col-7">
+          		        Message
+          	        </div>
+          	        <div class="col-2">
+          		        22m
+          	        </div>
+          	    </div>
+
+          	    <span class="message-time">Earlier</span>
+    		<div class="d-flex justify-content-around message-content">
+            	    <div class="col-3 d-flex flex-column align-items-center">
+          		        <i class="fas fa-user-circle"></i>Username
+          	        </div>
+          	        <div class="col-7">
+          		        Message
+          	        </div>
+          	        <div class="col-2">
+          		        22m
+          	        </div>
+          	    </div>
+
+          	    <div class="d-flex justify-content-around message-content">
+            	    <div class="col-3 d-flex flex-column align-items-center">
+          		        <i class="fas fa-user-circle"></i>Username
+          	        </div>
+          	        <div class="col-7">
+          		        Message
+          	        </div>
+          	        <div class="col-2">
+          		        22m
+          	        </div>
+          	    </div>
+
+          	    <div class="d-flex justify-content-around message-content">
+            	    <div class="col-3 d-flex flex-column align-items-center">
+          		        <i class="fas fa-user-circle"></i>Username
+          	        </div>
+          	        <div class="col-7">
+          		        Message
+          	        </div>
+          	        <div class="col-2">
+          		        22m
+          	        </div>
+          	    </div>
+
+
+    	</div>
+    </div>
+
+
+    
+
+    <div id="main-content">
+    <!--Tabs Component-->
+    <div class="row flex-column flex-lg-row justify-content-around align-items-center">
+    	<div class="col-8 col-md-6 col-lg-4">
+    	<div class="card mb-3 tab">
+          <div class="row no-gutters">
+            
+            <div class="col-md-6">
+              <div class="card-body">
+                
+                <div class="tab-number">2300</div>
+                <div class="tab-name">Visitors</div>
+                
+              </div>
+            </div>
+            <div class="col-md-6">
+              <img src="graph1.png" class="card-img" alt="...">
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="col-8 col-md-6 col-lg-4">
+    	<div class="card mb-3 tab">
+          <div class="row no-gutters ">
+            
+            <div class="col-md-6">
+              <div class="card-body">
+                
+                <div class="tab-number">1620</div>
+                <div class="tab-name">Users</div>
+                
+              </div>
+            </div>
+            <div class="col-md-6">
+              <img src="graph1.png" class="card-img" alt="...">
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="col-8 col-md-6  col-lg-4">
+    	<div class="card mb-3 tab">
+          <div class="row no-gutters ">
+            
+            <div class="col-md-6">
+              <div class="card-body">
+                
+                <div class="tab-number">630</div>
+                <div class="tab-name">Subscribers</div>
+                
+              </div>
+            </div>
+            <div class="col-md-6">
+              <img src="graph1.png" class="card-img" alt="...">
+            </div>
+          </div>
+        </div>
+        </div>
+
+        </div>
+        <!--Event Status Component-->
+        <div class="row justify-content-around align-items-center" id="event-status">
+        	<div class="col-7 col-md-8 bg-component d-flex flex-column justify-content-around">
+        		<span class="component-heading" align="center">Event Status</span>
+        		<div class="row flex-column flex-md-row justify-content-around align-items-center">
+
+        			<div class="col-12 col-lg-6 order-2 order-lg-1">
+        				<div class="d-flex flex-column justify-content-around align-items-center">
+        				
+        				<a href="#" class="component-button" id="Event1">Event 1</a>
+        				<a href="#" class="component-button" id="Event2">Event 2</a>
+        				<a href="#" class="component-button" id="Event3">Event 3</a>
+        				<a href="#" class="component-button" id="Event4">Event 4</a>
+        			    </div>
+        			</div>
+        			<div class="col-12 col-md-8 col-lg-6 order-1 order-lg-2 ">
+        				<div class="d-flex flex-column justify-content-around align-items-center">
+        				<canvas id="myChart" width="80%" height="80%"></canvas>
+        			   </div>
+        			</div>
+        	    </div>
+        	</div>
+        </div>
+
+        <!--Event Registrations-->
+        <div class="row flex-column flex-md-row justify-content-around align-items-center" id="EventReg">
+        	
+        	<div class="col-6 col-md-5 bg-component d-flex flex-column justify-content-around">
+
+        	<span class="component-heading">Event Registrations</span>
+
+        	<div class="row justify-content-around">
+
+        		<div class="col-8 col-lg-6 d-none d-lg-flex flex-column  align-items-center justify-content-around order-2 order-lg-1">
+        			<span class="component-text">Registrations</span>
+        			<span class="component-heading" id="Regs"></span>
+        			<span class="component-text">Target</span>
+        			<span class="component-heading" id="Target"></span>
+        		</div>
+
+        		<div class="col-8 d-flex d-lg-none justify-content-around">
+        			<span class="component-text mb-3">Target Achieved</span>
+        		</div>
+
+        		<div class="col-10 col-md-8 col-lg-6 eventDial order-1 order-lg-2">
+        			<div class="chart mb-5" data-size="170"  data-arrow="d" id="chart-div" data-value="88"></div>
+        		</div>
+        		
+        	</div>
+
+        	<a href="#" class="component-button" id="Events1">Event 1</a>
+        	<a href="#" class="component-button" id="Events2">Event 2</a>
+        	<a href="#" class="component-button" id="Events3">Event 3</a>
+            </div>
+
+        	<!-- Recent Changes Component-->
+        	<div class="col-6 col-md-5 bg-component d-flex flex-column justify-content-around">
+        	
+        	
+            <span class="component-heading">Recent Changes</span>
+
+            <div class="row justify-content-around align-items-center component-text mb-3">
+            	
+                <div class="col-4 col-md-4 col-lg-3 d-flex flex-column align-items-center ">
+          		    <i class="fas fa-user-circle"></i>Username
+          	    </div>
+
+          	    <div class="col-4 col-md-5 col-lg-6">
+          	    	 <a href="#">Added a New Blog</a>
+          	    </div>
+          	    <div class="col-3 col-md-3 col-lg-3">
+          		    30 mins ago
+          	    </div>
+            	
+            </div>
+
+             <div class="row justify-content-around align-items-center component-text mb-3">
+            	
+                <div class="col-4 col-md-4 col-lg-3 d-flex flex-column align-items-center ">
+          		    <i class="fas fa-user-circle"></i>Username
+          	    </div>
+
+          	    <div class="col-4 col-md-5 col-lg-6">
+          	    	 <a href="#">Added a New Blog</a>
+          	    </div>
+          	    <div class="col-3 col-md-3 col-lg-3">
+          		    30 mins ago
+          	    </div>
+            	
+            </div>
+
+             <div class="row justify-content-around align-items-center component-text mb-3">
+            	
+                <div class="col-4 col-md-4 col-lg-3 d-flex flex-column align-items-center ">
+          		    <i class="fas fa-user-circle"></i>Username
+          	    </div>
+
+          	    <div class="col-4 col-md-5 col-lg-6">
+          	    	 <a href="#">Added a New Blog</a>
+          	    </div>
+          	    <div class="col-3 col-md-3 col-lg-3">
+          		    30 mins ago
+          	    </div>
+            	
+            </div>
+
+             <div class="row justify-content-around align-items-center component-text mb-3">
+            	
+                <div class="col-4 col-md-4 col-lg-3 d-flex flex-column align-items-center ">
+          		    <i class="fas fa-user-circle"></i>Username
+          	    </div>
+
+          	    <div class="col-4 col-md-5 col-lg-6">
+          	    	 <a href="#">Added a New Blog</a>
+          	    </div>
+          	    <div class="col-3 col-md-3 col-lg-3">
+          		    30 mins ago
+          	    </div>
+            	
+            </div>
+
+            
+            </div>
+        </div>
+
+        <!-- Upcoming DSC Sessions for smaller screens-->
+
+        <div class="d-flex flex-column flex-lg-row justify-content-around align-items-center">
+        	<div class="col-10 col-md-8 col-lg-6 bg-component">
+        		<div class="d-flex flex-column justify-content-around align-items-center">
+        <span class="component-heading ">Upcoming DSC Sessions</span>
+
+        	<div class="carousal d-flex flex-column flex-lg-row justify-content-around align-items-start pb-3 px-3">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              
+
+                <div class="d-flex flex-column flex-lg-row justify-content-around align-items-center card-holder text-white">
+                  <div class="card">
+                    <img src="dsc1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text mb-4">This is a longer card with supporting text  </p>
+                      
+                      	<div class="bottom-text">
+                      	<p class="float-left mt-4">6 PM</p>
+                        <p class="float-right mt-4">3 Days Left</p>
+                        </div>
+                    </div>
+                  </div>
+
+                  
+                </div>
+            </div>
+
+            <div class="carousel-item">
+              
+
+                <div class="d-flex flex-column flex-lg-row justify-content-around align-items-center card-holder text-white">
+                  <div class="card">
+                    <img src="dsc2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text mb-4">This is a longer card with supporting text  </p>
+                      
+                      	<div class="bottom-text">
+                      	<p class="float-left mt-4">6 PM</p>
+                        <p class="float-right mt-4">3 Days Left</p>
+                        </div>
+                    </div>
+                  </div>
+
+                  
+                </div>
+            </div>
+
+            <div class="carousel-item">
+              
+
+                <div class="d-flex flex-column flex-lg-row justify-content-around align-items-center card-holder text-white">
+                  <div class="card">
+                    <img src="dsc3.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text mb-4">This is a longer card with supporting text  </p>
+                      
+                      	<div class="bottom-text">
+                      	<p class="float-left mt-4">6 PM</p>
+                        <p class="float-right mt-4">3 Days Left</p>
+                        </div>
+                    </div>
+                  </div>
+
+                  
+                </div>
+            </div>
+
+            <div class="carousel-item">
+              
+
+                <div class="d-flex flex-column flex-lg-row justify-content-around align-items-center card-holder text-white">
+                  <div class="card">
+                    <img src="dsc2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text mb-4">This is a longer card with supporting text  </p>
+                      
+                      	<div class="bottom-text">
+                      	<p class="float-left mt-4">6 PM</p>
+                        <p class="float-right mt-4">3 Days Left</p>
+                        </div>
+                    </div>
+                  </div>
+
+                  
+                </div>
+            </div>
+            
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <i class="fas fa-chevron-circle-left"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+             <i class="fas fa-chevron-circle-right"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+        <!-- Upcoming DSC Sessions-->
+
+        <!--<div class="d-none d-lg-flex flex-column flex-lg-row justify-content-around align-items-center ">
+        	<div class="col-10 bg-component">
+        		<div class="d-flex flex-column justify-content-around align-items-center">
+        <span class="component-heading">Upcoming DSC Sessions</span>
+
+        	<div class="carousal d-flex flex-column flex-lg-row justify-content-around align-items-start pb-3 px-3">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              
+
+                <div class="d-flex flex-column flex-lg-row justify-content-around align-items-center card-holder text-white">
+                  <div class="card">
+                    <img src="dsc1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text mb-4">This is a longer card with supporting text  </p>
+                      
+                      	<div class="bottom-text">
+                      	<p class="float-left mt-4">6 PM</p>
+                        <p class="float-right mt-4">3 Days Left</p>
+                        </div>
+                     
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="dsc1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text mb-4">This is a longer card with supporting text  </p>
+                      
+                      	<div class="bottom-text">
+                      	<p class="float-left mt-4">6 PM</p>
+                      <p class="float-right mt-4">3 Days Left</p>
+                     </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="dsc1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text mb-4">This is a longer card with supporting text  </p>
+                      
+                      	<div class="bottom-text">
+                      	<p class="float-left mt-4">6 PM</p>
+                      <p class="float-right mt-4">3 Days Left</p>
+                     </div>
+                    </div>
+                  </div>
+
+                  
+                </div>
+
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex flex-column flex-lg-row justify-content-around align-items-center card-holder text-white">
+                   <div class="card">
+                    <img src="dsc2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text mb-4">This is a longer card with supporting text  </p>
+                      
+                      	<div class="bottom-text">
+                      	<p class="float-left mt-4">6 PM</p>
+                      <p class="float-right mt-4">3 Days Left</p>
+                     </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="dsc2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text mb-4">This is a longer card with supporting text  </p>
+                      
+                      	<div class="bottom-text">
+                      	<p class="float-left mt-4">6 PM</p>
+                      <p class="float-right mt-4">3 Days Left</p>
+                     </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="dsc2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text mb-4">This is a longer card with supporting text  </p>
+                      
+                      	<div class="bottom-text">
+                      	<p class="float-left mt-4">6 PM</p>
+                      <p class="float-right mt-4">3 Days Left</p>
+                     </div>
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="d-flex flex-column flex-lg-row justify-content-around align-items-center card-holder text-white">
+                   <div class="card">
+                    <img src="dsc3.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text mb-4">This is a longer card with supporting text  </p>
+                      
+                      	<div class="bottom-text">
+                      	<p class="float-left mt-4">6 PM</p>
+                      <p class="float-right mt-4">3 Days Left</p>
+                     </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="dsc3.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text mb-4">This is a longer card with supporting text  </p>
+                      
+                      	<div class="bottom-text">
+                      	<p class="float-left mt-4">6 PM</p>
+                      <p class="float-right mt-4">3 Days Left</p>
+                     </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="dsc3.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text mb-4">This is a longer card with supporting text  </p>
+                      
+                      	<div class="bottom-text">
+                      	<p class="float-left mt-4">6 PM</p>
+                      <p class="float-right mt-4">3 Days Left</p>
+                     </div>
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>-->
+
+      <!-- Blog Views Component-->
+      <div class="row justify-content-around align-items-center">
+      	<div class="col-7 col-md-8 bg-component">
+      		<div class="row column-heading">
+           <h4 class="col-12 col-md-9 component-heading">Blogs</h4>
+           
+           <i class="col-1 fas fa-eye d-none d-md-block"></i>
+           <i class="col-1 fas fa-heart d-none d-md-block"></i>
+           <i class="col-1 fas fa-comment-dots d-none d-md-block"></i>
+          
+          </div>
+
+        
+          <div class="row component-text mb-2">
+            <div class="col-4 col-md-3 d-flex flex-column justify-content-around align-items-center"><i class="fas fa-user-circle"></i> Username</div>
+            <a class="col-8 col-md-6" href="#">Title of the Blog</a>
+            
+            <div class="col-1 d-none d-md-block">78</div>
+            <div class="col-1 d-none d-md-block">70</div>
+            <div class="col-1 d-none d-md-block">35</div>
+           
+          </div>
+
+          <div class="row component-text mb-2">
+            <div class="col-4 col-md-3 d-flex flex-column justify-content-around align-items-center"><i class="fas fa-user-circle"></i> Username</div>
+            <a class="col-8 col-md-6" href="#">Title of the Blog</a>
+            
+            <div class="col-1 d-none d-md-block">78</div>
+            <div class="col-1 d-none d-md-block">70</div>
+            <div class="col-1 d-none d-md-block">35</div>
+           
+          </div>
+
+          <div class="row component-text mb-2">
+            <div class="col-4 col-md-3 d-flex flex-column justify-content-around align-items-center"><i class="fas fa-user-circle"></i> Username</div>
+            <a class="col-8 col-md-6" href="#">Title of the Blog</a>
+            
+            <div class="col-1 d-none d-md-block">78</div>
+            <div class="col-1 d-none d-md-block">70</div>
+            <div class="col-1 d-none d-md-block">35</div>
+           
+          </div>
+
+          <div class="row component-text mb-2">
+            <div class="col-4 col-md-3 d-flex flex-column justify-content-around align-items-center"><i class="fas fa-user-circle"></i> Username</div>
+            <a class="col-8 col-md-6" href="#">Title of the Blog</a>
+            
+            <div class="col-1 d-none d-md-block">78</div>
+            <div class="col-1 d-none d-md-block">70</div>
+            <div class="col-1 d-none d-md-block">35</div>
+           
+          </div>
+
+          <div class="row component-text mb-2">
+            <div class="col-4 col-md-3 d-flex flex-column justify-content-around align-items-center"><i class="fas fa-user-circle"></i> Username</div>
+            <a class="col-8 col-md-6" href="#">Title of the Blog</a>
+            
+            <div class="col-1 d-none d-md-block">78</div>
+            <div class="col-1 d-none d-md-block">70</div>
+            <div class="col-1 d-none d-md-block">35</div>
+           
+          </div>
+
+        </div>
+      </div>
+
+      <!--Event Registrations-->
+
+
+            
+
+        
+            
+            
+
+
+
+        </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    
+    
+
+<!--Javascript-->
+    <!-- Custom Javascript-->
+	<script type="text/javascript" src="dashboard.js"></script>
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
